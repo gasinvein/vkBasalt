@@ -60,7 +60,7 @@ jobs:
         echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf
         pacman --noconfirm -Suy
         pacman --noconfirm -S \
-          base-devel \
+          base-devel multilib-devel \
           meson \
           pkgconf \
           vulkan-headers \
