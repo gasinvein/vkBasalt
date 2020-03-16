@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
 
-  build-ubuntu:
+  ubuntu-make:
     runs-on: ubuntu-latest
     container: ubuntu:eoan
 
@@ -42,7 +42,7 @@ jobs:
         name: vkbasalt-ubuntu-results
         path: results-ubuntu
 
-  build-archlinux:
+  archlinux-make:
     runs-on: ubuntu-latest
     container: archlinux:latest
 
