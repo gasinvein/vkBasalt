@@ -1,7 +1,11 @@
 data_dir = get_option('datadir')
 
 vulkan_layer_dir = join_paths(data_dir, 'vulkan', 'implicit_layer.d')
-reshade_dir = join_paths(get_option('prefix'), data_dir, 'reshade')
+if get_option('reshade_dir') != ''
+    reshade_dir = get_option('reshade_dir')
+else
+    reshade_dir = join_paths(get_option('prefix'), data_dir, 'reshade')
+endif
 
 configure_file(
     input : 'vkBasalt.json.in',
